@@ -1,5 +1,5 @@
-resource "azurerm_lb_backend_address_pool_address" "lb_backend_address_pool_addresss" {
-  for_each = var.lb_backend_address_pool_addresss
+resource "azurerm_lb_backend_address_pool_address" "lb_backend_address_pool_addresses" {
+  for_each = var.lb_backend_address_pool_addresses
 
   backend_address_pool_id             = each.value.backend_address_pool_id
   name                                = each.value.name

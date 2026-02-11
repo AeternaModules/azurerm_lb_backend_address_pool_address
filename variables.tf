@@ -1,6 +1,6 @@
-variable "lb_backend_address_pool_addresss" {
+variable "lb_backend_address_pool_addresses" {
   description = <<EOT
-Map of lb_backend_address_pool_addresss, attributes below
+Map of lb_backend_address_pool_addresses, attributes below
 Required:
     - backend_address_pool_id
     - name
