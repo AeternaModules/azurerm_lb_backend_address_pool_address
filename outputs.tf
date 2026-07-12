@@ -1,3 +1,7 @@
+output "lb_backend_address_pool_addresses_id" {
+  description = "Map of id values across all lb_backend_address_pool_addresses, keyed the same as var.lb_backend_address_pool_addresses"
+  value       = { for k, v in azurerm_lb_backend_address_pool_address.lb_backend_address_pool_addresses : k => v.id }
+}
 output "lb_backend_address_pool_addresses_backend_address_ip_configuration_id" {
   description = "Map of backend_address_ip_configuration_id values across all lb_backend_address_pool_addresses, keyed the same as var.lb_backend_address_pool_addresses"
   value       = { for k, v in azurerm_lb_backend_address_pool_address.lb_backend_address_pool_addresses : k => v.backend_address_ip_configuration_id }
